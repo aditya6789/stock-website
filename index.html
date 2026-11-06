@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market School • Master the Stock Market. 100% Free.</title>
+  <meta name="description" content="India's premier bilingual stock market learning academy inspired by Zerodha Varsity. 33 in-depth chapters, interactive candlestick replay simulator, and 24/7 AI mentor.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232F6BFF' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><path d='M3 3v18h18'/><path d='M7 16l4-8 4 5 5-9'/></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav-wrap">
+    <div class="nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 5 5-9"/></svg></span>
+        Market School
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#simulator">Simulator</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-dark nav-dl"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#32BBFF" d="M3.7 2.2L13.5 12 3.7 21.8c-.3-.3-.5-.7-.5-1.2V3.4c0-.5.2-.9.5-1.2z"/><path fill="#00F076" d="M3.7 2.2c.4-.4 1-.4 1.6-.1l11.3 6.4-3.1 3.5z"/><path fill="#FF3A44" d="M3.7 21.8c.4.4 1 .4 1.6.1l11.3-6.4-3.1-3.5z"/><path fill="#FFC800" d="M16.6 8.5l3.7 2.1c.9.5.9 1.3 0 1.8l-3.7 2.1-3.1-3z"/></svg><span>Download</span></a>
+        <button class="burger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu hidden">
+      <div class="mobile-lang">
+        <span>Language</span>
+        <div class="lang-switch">
+          <button onclick="setLanguage('en'); toggleMobileMenu()" class="lang-btn lang-active" data-lang-btn="en">EN</button>
+          <button onclick="setLanguage('hi'); toggleMobileMenu()" class="lang-btn" data-lang-btn="hi">हिंदी</button>
+        </div>
+      </div>
+      <a href="#features" onclick="toggleMobileMenu()">Features</a>
+      <a href="#curriculum" onclick="toggleMobileMenu()">Curriculum (33 Chapters)</a>
+      <a href="#simulator" onclick="toggleMobileMenu()">Candlestick Simulator</a>
+      <a href="#mentor" onclick="toggleMobileMenu()">AI Mentor</a>
+      <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+      <a href="#download" onclick="toggleMobileMenu()" class="btn btn-blue btn-block">Download Android App (Free)</a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="top" class="hero">
+    <div class="container hero-inner">
+      <div class="join-pill">
+        <span class="avatars" aria-hidden="true"><i style="background:linear-gradient(135deg,#FDBA74,#F97316)">A</i><i style="background:linear-gradient(135deg,#93C5FD,#3B82F6)">R</i><i style="background:linear-gradient(135deg,#FCA5A5,#EF4444)">S</i></span>
+        <span id="i18n-heroTag" class="join-text">Join 10K+ Learners</span>
+        <a href="#download" class="join-cta"><span id="i18n-heroAccess">Get Access</span> →</a>
+      </div>
+
+      <h1 class="hero-title">
+        <span id="i18n-heroTitle1" class="block">Master the Stock Market.</span>
+        <span id="i18n-heroTitle2" class="block">Zero Fluff. 100% Free.</span>
+      </h1>
+
+      <p id="i18n-heroDesc" class="hero-desc">
+        India's most rigorous, bilingual market academy inspired by Zerodha Varsity. Master market mechanics, test strategies on real historical candlestick replays, and learn with your 24/7 AI mentor.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#download" class="btn btn-dark btn-lg"><span id="i18n-ctaStart">Start Learning Free</span></a>
+        <a href="#curriculum" class="btn btn-soft btn-lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 3.5v17a1 1 0 001.5.9l14-8.5a1 1 0 000-1.8l-14-8.5A1 1 0 006 3.5z"/></svg>
+          <span id="i18n-ctaExplore">Browse 33 Chapters</span>
+        </a>
+      </div>
+
+      <!-- Product screenshots live in website/images/ -->
+      <div class="phone-stage">
+        <div class="arch" aria-hidden="true"></div>
+        <div class="ph ph-left"><img src="images/6.png" alt="App screen: curriculum" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></div>
+        <div class="ph ph-center"><img src="images/1.png" alt="App screen: dashboard" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></div>
+        <div class="ph ph-right"><img src="images/7.png" alt="App screen: replay simulator" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHOWCASE ===================== -->
+  <section id="showcase" class="showcase">
+    <div class="haze" aria-hidden="true"></div>
+    <div class="container">
+      <h2 class="show-title">Learn smarter with a layout that keeps your <span>progress, practice and discipline simple to follow.</span></h2>
+
+      <div class="aud">
+        <p>Who It's Built For</p>
+        <div class="aud-chips">
+          <span># Beginners</span>
+          <span># College Students</span>
+          <span># Working Professionals</span>
+          <span># Hindi Learners</span>
+          <span># Future Traders</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product images: website/images/4.png ... showcase-5.png (transparent PNG, phone frame included) -->
+    <div class="show-row">
+      <div class="sp sp-far sp-l"><img src="images/4.png" alt="App screen" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></div>
+      <div class="sp sp-mid"><img src="images/2.png" alt="App screen: curriculum" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></div>
+      <div class="sp sp-main"><img src="images/3.png" alt="App screen: dashboard" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></div>
+      <div class="sp sp-mid"><img src="images/8.png" alt="App screen: replay" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></div>
+      <div class="sp sp-far sp-r"><img src="images/5.png" alt="App screen" onload="this.parentNode.classList.add('loaded')" onerror="this.remove()"></div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="section tight">
+    <div class="container">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">33</div>
+          <div id="i18n-stat1Label" class="stat-label">In-Depth Chapters</div>
+          <div id="i18n-stat1Desc" class="stat-desc">Varsity Core Aligned</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">₹0</div>
+          <div id="i18n-stat2Label" class="stat-label">Cost Forever</div>
+          <div id="i18n-stat2Desc" class="stat-desc">No Paid Upsells</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">10K+</div>
+          <div id="i18n-stat3Label" class="stat-label">Active Learners</div>
+          <div id="i18n-stat3Desc" class="stat-desc">Across Bharat</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div id="i18n-stat4Label" class="stat-label">SEBI Advisory</div>
+          <div id="i18n-stat4Desc" class="stat-desc">Pure Education Only</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES / PILLARS ===================== -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="sec-head split">
+        <div>
+          <span class="pill-tag grey"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2F6BFF"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><span id="i18n-pillarBadge">Our Features</span></span>
+          <h2 class="h2"><span id="i18n-pillarHeadA">Everything You Need for</span> <span id="i18n-pillarHeadB" class="muted">a Smarter Investing Journey</span></h2>
+        </div>
+        <p id="i18n-pillarSub" class="sec-sub">Market School brings together structured lessons, risk-free practice and an AI mentor to make learning the markets clear, safe and unforgettable.</p>
+      </div>
+
+      <div class="fgrid">
+
+        <!-- 1. tall blue -->
+        <article class="fc fc-blue fc-tall">
+          <h3>Pedagogical 6-Block Engine</h3>
+          <p>No walls of dry text. Every lesson follows a strict, proven structure from objective to quiz.</p>
+          <div class="mock-phone"><img src="images/6.png" alt="Chapter reader screen"></div>
+        </article>
+
+        <!-- 2. wide dark -->
+        <article class="fc fc-dark fc-wide">
+          <div class="fc-copy">
+            <h3>Candlestick Replay Simulator</h3>
+            <p>Replay real NIFTY price action candle-by-candle and test your edge without risking a rupee.</p>
+          </div>
+          <div class="notes" aria-hidden="true">
+            <div class="note note-dark">
+              <span class="note-ic">🕯️</span>
+              <div><b>Hammer at ₹22,100</b><small>Demand zone held. Candle closed bullish.</small></div>
+            </div>
+            <div class="note note-light">
+              <span class="note-ic amber">🎯</span>
+              <div><b>Replay Result</b><small>Buy long hit target. Risk : Reward 1 : 2.4</small></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. green -->
+        <article class="fc fc-green">
+          <h3>Bilingual AI Market Mentor</h3>
+          <p>Ask any doubt in Hindi, English or Hinglish and get instant, simple answers.</p>
+          <div class="mock-card chat" aria-hidden="true">
+            <div class="mc-title">Market Mentor <span>● Online</span></div>
+            <div class="mc-you">Theta decay kya hota hai?</div>
+            <div class="mc-ai">Option ki value expiry ke paas "pighalti hui ice" jaisi ghatti hai…</div>
+          </div>
+        </article>
+
+        <!-- 4. sky -->
+        <article class="fc fc-sky">
+          <h3>Trade Journal &amp; Discipline</h3>
+          <p>Log paper trades, spot FOMO and revenge trading, and follow the 1% risk rule.</p>
+          <div class="mock-glass" aria-hidden="true">
+            <div class="mg-title">Discipline Report</div>
+            <div class="mock-card">
+              <div class="mg-row"><i>✓</i> 1% risk per trade</div>
+              <div class="mg-row"><i>✓</i> 0 FOMO trades today</div>
+              <div class="mg-btn">Weekly Review</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CURRICULUM ===================== -->
+  <section id="curriculum" class="section">
+    <div class="container">
+      <div class="sec-head split">
+        <div>
+          <span class="pill-tag grey"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2F6BFF"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><span id="i18n-modBadge">STRUCTURED PEDAGOGICAL CURRICULUM</span></span>
+          <h2 class="h2"><span id="i18n-modHeadA">Master Every Level</span> <span id="i18n-modHeadB" class="muted">Step-by-Step</span></h2>
+        </div>
+        <p id="i18n-modSub" class="sec-sub">From first-time IPO bidding to advanced candlestick formations, support/resistance, and risk management.</p>
+      </div>
+
+      <div class="filters">
+        <div class="tabs">
+          <button data-filter="all" class="curriculum-tab curriculum-tab-active"><span id="i18n-tabAll">All Chapters</span><em class="tab-count" id="cnt-all"></em></button>
+          <button data-filter="mod1" class="curriculum-tab"><span id="i18n-tabMod1">Module 1: Stock Basics</span><em class="tab-count" id="cnt-mod1"></em></button>
+          <button data-filter="mod2" class="curriculum-tab"><span id="i18n-tabMod2">Module 2: Technical Analysis</span><em class="tab-count" id="cnt-mod2"></em></button>
+        </div>
+        <div class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input type="text" id="curriculum-search" placeholder="Search chapters (e.g. IPO, Hammer, RSI, Regulators)...">
+        </div>
+      </div>
+
+      <div id="curriculum-grid" class="ch-grid"><!-- injected by renderCurriculum() --></div>
+    </div>
+  </section>
+
+  <!-- ===================== SIMULATOR ===================== -->
+  <section id="simulator" class="section">
+    <div class="container">
+      <div class="sim2">
+        <div class="sim2-glow" aria-hidden="true"></div>
+
+        <div class="sim2-copy">
+          <span class="pill-tag grey"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2F6BFF"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><span id="i18n-simBadge">RISK-FREE PRACTICE ENGINE</span></span>
+          <h2 class="h2"><span id="i18n-simHeadA">Test Your Market Edge</span> <span id="i18n-simHeadB" class="muted">Before Risking Real Money</span></h2>
+          <p id="i18n-simSub" class="sec-sub left">Replay real historical NIFTY &amp; stock charts candle-by-candle. Make trading decisions and evaluate your edge without losing a rupee.</p>
+
+          <div class="sim2-steps">
+            <div class="sstep"><span class="sstep-ic">🔒</span><div><b>Decision Gate</b><p>You can't see future candles until you choose your entry and stoploss.</p></div></div>
+            <div class="sstep"><span class="sstep-ic">⚖️</span><div><b>Objective Evaluation</b><p>Automated math verifies your risk-to-reward is at least 1:2.</p></div></div>
+            <div class="sstep"><span class="sstep-ic">🧠</span><div><b>Pedagogical Review</b><p>Instant post-trade breakdown of why the setup worked or failed.</p></div></div>
+          </div>
+        </div>
+
+        <div class="sim2-stage">
+          <div class="sim2-phone"><img src="images/7.png" alt="Chart Practice Replay screen" onerror="this.parentNode.style.display='none'"></div>
+
+          <!-- Interactive try-it card -->
+          <div class="try-card">
+            <div class="try-top">
+              <div>
+                <span class="try-eyebrow"><i></i> Try it yourself</span>
+                <div class="try-ticker">NIFTY 50 <span>22,118 <em>▲ 0.4%</em></span></div>
+              </div>
+              <span class="try-chip">Paper trade</span>
+            </div>
+
+            <div id="mini-sim-chart" class="sim-chart try-chart">
+              <div class="sim-line"></div>
+              <div class="sim-zone mono">Support ₹22,100</div>
+              <div class="cd"><i class="w r" style="height:12px"></i><i class="b r" style="height:46px"></i><i class="w r" style="height:12px"></i></div>
+              <div class="cd"><i class="w r" style="height:9px"></i><i class="b r" style="height:34px"></i><i class="w r" style="height:9px"></i></div>
+              <div class="cd"><i class="w g" style="height:3px"></i><i class="b g ring" style="height:16px"></i><i class="w g" style="height:56px"></i><em>HAMMER</em></div>
+              <div id="sim-candle-reveal" class="cd hidden"><i class="w g" style="height:9px"></i><i class="b g" style="height:70px"></i><i class="w g" style="height:9px"></i><em>NEXT</em></div>
+            </div>
+
+            <p class="sim-q">A Hammer just formed at support. What's your move?</p>
+            <div class="sim-btns">
+              <button onclick="playMiniSim('BUY')" class="btn btn-green btn-block"><b>Buy</b><span class="mono sl">SL 22,080</span></button>
+              <button onclick="playMiniSim('SELL')" class="btn btn-red btn-block"><b>Sell</b><span class="mono sl">SL 22,180</span></button>
+            </div>
+            <div id="mini-sim-result" class="hidden"></div>
+            <div id="mini-sim-outcome" class="hidden"></div>
+            <div class="try-foot"><span>No real money involved</span><button class="sim-reset" onclick="resetMiniSim()">↺ Reset</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AI MENTOR ===================== -->
+  <section id="mentor" class="section">
+    <div class="container">
+      <div class="mt">
+        <div class="mt-glow" aria-hidden="true"></div>
+        <div class="mt-dots" aria-hidden="true"></div>
+
+        <div class="mt-head">
+          <span class="mt-pill"><i></i><span id="i18n-tutorBadge">24/7 PERSONAL MENTOR</span></span>
+          <h2><span id="i18n-tutorHeadA">An AI Mentor That</span> <span id="i18n-tutorHeadB">Speaks Your Language</span></h2>
+          <p id="i18n-tutorSub">Ask complex market questions in Hindi, English, or Hinglish. Get instant analogies, math formulas, and risk warnings.</p>
+        </div>
+
+        <div class="mt-grid">
+          <div class="mt-col mt-left">
+            <div class="mt-card">
+              <span class="mt-ic">💬</span>
+              <b>Jargon, made simple</b>
+              <p>Everyday analogies for every market term, in your own language.</p>
+            </div>
+            <div class="mt-card">
+              <span class="mt-ic">🧮</span>
+              <b>Math you can see</b>
+              <p>Step-by-step formulas with worked examples, not just definitions.</p>
+            </div>
+            <div class="mt-card">
+              <span class="mt-ic">📚</span>
+              <b>Answers from your course</b>
+              <p>Every reply cites the exact chapters it came from.</p>
+            </div>
+          </div>
+
+          <div class="mt-phone">
+            <div class="mt-ring" aria-hidden="true"></div>
+            <img src="images/9.png" alt="Market School AI Tutor screen" onerror="this.parentNode.style.display='none'">
+          </div>
+
+          <div class="mt-col mt-right">
+            <div class="mt-chat">
+              <div class="mt-chat-head">
+                <span class="mt-av">✦</span>
+                <div><b>Try the mentor</b><small><i></i> Hindi • English • Hinglish</small></div>
+              </div>
+              <div id="mentor-body" class="mt-chat-body">
+                <div class="msg you">Bhai, RSI 70 se upar ho toh kya hamesha sell karna chahiye?</div>
+                <div class="msg ai">Nahi. RSI 70+ ka matlab "strong momentum" hai, "sell signal" nahi. Pehle trend dekho, phir confirmation candle. 🕯️</div>
+              </div>
+              <div class="mt-chips">
+                <button onclick="mentorAsk(0)">What is RSI?</button>
+                <button onclick="mentorAsk(1)">Theta decay kya hai?</button>
+                <button onclick="mentorAsk(2)">1% rule kya hai?</button>
+                <button onclick="mentorAsk(3)">Hammer candle?</button>
+              </div>
+            </div>
+            <div class="mt-card mt-card-safe">
+              <span class="mt-ic">🛡️</span>
+              <b>Risk-first, never tips</b>
+              <p>It teaches and warns about risk. It never tells you what to buy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="section">
+    <div class="container faq">
+      <div class="faq-side">
+        <span class="pill-tag grey"><svg width="14" height="14" viewBox="0 0 24 24" fill="#2F6BFF"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></svg><span id="i18n-faqBadge">FREQUENTLY ASKED QUESTIONS</span></span>
+        <h2 class="h2"><span id="i18n-faqHeadA">Everything You Need</span> <span id="i18n-faqHeadB" class="muted">to Know</span></h2>
+        <p class="sec-sub left">Can't find your answer? Start the free course and ask the AI Mentor — in Hindi or English.</p>
+        <div class="faq-help"><span class="faq-help-ic">💬</span><div><b>Still curious?</b><p>Ask the AI Mentor in Hindi, English or Hinglish.</p></div><a href="#mentor" class="btn btn-dark btn-sm">Ask the mentor →</a></div>
+      </div>
+
+      <div class="faq-list">
+        <div id="faq-item-1" class="faq-item faq-open">
+          <button onclick="toggleFaq(1)" class="faq-q"><i class="faq-n">01</i><span>Is Market School really 100% free? Are there hidden fees?</span><i class="faq-chevron">⌄</i></button>
+          <div class="faq-answer"><div><p>Yes, Market School is 100% free open educational infrastructure. All 33 chapters of Module 1 (Stock Markets) and Module 2 (Technical Analysis), the historical candlestick simulator, and interactive calculators are completely free — no paywalls, no upsells, no hidden charges.</p></div></div>
+        </div>
+        <div id="faq-item-2" class="faq-item">
+          <button onclick="toggleFaq(2)" class="faq-q"><i class="faq-n">02</i><span>Can I learn entirely in Hindi?</span><i class="faq-chevron">⌄</i></button>
+          <div class="faq-answer"><div><p>Haan, bilkul! Market School ko poori tarah se bilingual banaya gaya hai. Aap ek click me Hindi ya English me switch kar sakte hain. AI Mentor bhi aapse shuddh Hindi ya Hinglish me baat karta hai aur saare complex jargon ko aasaan udaharano se samjhata hai.</p></div></div>
+        </div>
+        <div id="faq-item-3" class="faq-item">
+          <button onclick="toggleFaq(3)" class="faq-q"><i class="faq-n">03</i><span>How does Market School differ from watching YouTube videos?</span><i class="faq-chevron">⌄</i></button>
+          <div class="faq-answer"><div><p>YouTube videos often focus on sensationalism, fake P&amp;L screenshots, and selling Telegram calls. Market School follows a strict 6-block pedagogical syllabus derived from Zerodha Varsity, rigorous mathematical formulas, a risk-free simulator and zero stock tips — so you build real skill instead of borrowed opinions.</p></div></div>
+        </div>
+        <div id="faq-item-4" class="faq-item">
+          <button onclick="toggleFaq(4)" class="faq-q"><i class="faq-n">04</i><span>Do I need a commerce, finance, or math background?</span><i class="faq-chevron">⌄</i></button>
+          <div class="faq-answer"><div><p>None at all. We start from ground zero: what is inflation, why idle cash loses purchasing power, how an entrepreneur starts a company, and why IPOs are launched. All financial math is broken down with step-by-step real-life examples.</p></div></div>
+        </div>
+        <div id="faq-item-5" class="faq-item">
+          <button onclick="toggleFaq(5)" class="faq-q"><i class="faq-n">05</i><span>Will this curriculum help me prepare for NISM certifications?</span><i class="faq-chevron">⌄</i></button>
+          <div class="faq-answer"><div><p>Yes! The curriculum aligns directly with the core syllabi of NISM Series VIII (Equity Derivatives) and NISM Series XV (Research Analyst), covering settlement cycles, corporate actions, regulatory mandates, and quantitative foundations.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section id="download" class="section tight">
+    <div class="container">
+      <div class="cta">
+        <div class="cta-grid" aria-hidden="true"></div>
+        <div class="cta-copy">
+          <span class="cta-pill">Free • Hindi + English</span>
+          <h2 id="i18n-ctaBannerTitle">Ready to Stop Gambling &amp; Start Investing?</h2>
+          <p id="i18n-ctaBannerSub">Join thousands of disciplined learners across India. Available on Android, iOS Web, and Desktop.</p>
+          <div class="cta-btns">
+            <a href="#" class="btn btn-white btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#32BBFF" d="M3.7 2.2L13.5 12 3.7 21.8c-.3-.3-.5-.7-.5-1.2V3.4c0-.5.2-.9.5-1.2z"/><path fill="#00F076" d="M3.7 2.2c.4-.4 1-.4 1.6-.1l11.3 6.4-3.1 3.5z"/><path fill="#FF3A44" d="M3.7 21.8c.4.4 1 .4 1.6.1l11.3-6.4-3.1-3.5z"/><path fill="#FFC800" d="M16.6 8.5l3.7 2.1c.9.5.9 1.3 0 1.8l-3.7 2.1-3.1-3z"/></svg>
+              <span id="i18n-btnDownloadApk">Download Android APK</span>
+            </a>
+            <a href="#curriculum" class="btn btn-ghost btn-lg"><span id="i18n-btnLaunchWeb">Launch Web App</span></a>
+          </div>
+          <ul class="cta-trust">
+            <li>100% free forever</li>
+            <li>No registration to start</li>
+            <li>Pure education, zero tips</li>
+          </ul>
+        </div>
+        <div class="cta-art" aria-hidden="true">
+          <div class="cta-phone cp-back"><img src="images/2.png" alt="" onerror="this.parentNode.style.display='none'"></div>
+          <div class="cta-phone cp-front"><img src="images/1.png" alt="" onerror="this.parentNode.style.display='none'"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="#top" class="brand"><span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 5 5-9"/></svg></span>Market School</a>
+          <p>Open educational software for Bharat. Learn markets in Hindi &amp; English — without tips, hype or paywalls.</p>
+        </div>
+        <div><h4>Pages</h4><a href="#features">Features</a><a href="#curriculum">Curriculum</a><a href="#simulator">Simulator</a></div>
+        <div><h4>Learn</h4><a href="#mentor">AI Mentor</a><a href="#faq">FAQ</a></div>
+        <div><h4>Get the App</h4><a href="#download">Android APK</a><a href="#curriculum">Web App</a></div>
+      </div>
+      <div class="foot-bottom">
+        <p>© 2026 Market School Academy. Educational content only — not investment advice.</p>
+        <p>Built with ❤️ for disciplined retail investors.</p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /sheet -->
+
+  <!-- ===================== CHAPTER MODAL ===================== -->
+  <div id="chapter-modal" class="modal hidden">
+    <div class="modal-box"><div id="modal-content"><!-- injected by openChapterModal() --></div></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

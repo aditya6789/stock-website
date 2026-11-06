@@ -1,0 +1,20 @@
+{
+  "name": "market-school-landing-page",
+  "version": "1.0.0",
+  "description": "Official high-converting landing page website for Market School (मार्केट स्कूल)",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "serve": "npx serve -l 8080 .",
+    "dev": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "stock-market",
+    "zerodha-varsity",
+    "fintech",
+    "financial-education",
+    "trading-simulator",
+    "technical-analysis"
+  ],
+  "author": "Market School Team",
+  "license": "MIT"
+}
